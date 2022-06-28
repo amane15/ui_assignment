@@ -3,7 +3,7 @@ import { HiPlus } from "react-icons/hi";
 import { HiMinus } from "react-icons/hi";
 import "../assets/css/accordian.css";
 
-const Text = ({ title, description }) => {
+const Text = ({ title, description, img }) => {
     const [show, setShow] = useState(false);
 
     const handleShow = () => {
@@ -21,6 +21,11 @@ const Text = ({ title, description }) => {
                 )}
             </div>
             <div className="border"></div>
+            {show && (
+                <div className="mobile__img">
+                    <img src={img} alt="" />
+                </div>
+            )}
             {show && <p className="bar__description">{description}</p>}
         </div>
     );

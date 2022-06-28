@@ -1,15 +1,22 @@
+.accordian {
+    padding: 1rem;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
     justify-content: center;
-    align-items: center;
     margin: 5rem 10rem;
     column-gap: 0.5rem;
 }
 
 .grid__img img {
     width: 35rem;
+}
+
+.mobile__img {
+    display: none;
 }
 
 .active {
@@ -52,21 +59,42 @@
     margin: 1rem 0;
 }
 
+.border.active {
+    border: 1px solid #e03c31;
+    margin: 1rem 0;
+}
+
 .active {
     color: #e03c31;
 }
 
 @media screen and (max-width: 768px) {
+    .accordian {
+        padding: 1rem;
+    }
+
     .grid-container {
-        margin: 2rem auto;
+        margin: 5rem auto;
         grid-template-columns: 1fr;
     }
 
+    .grid__img {
+        display: none;
+    }
+
+    .mobile__img {
+        display: block;
+    }
+
+    .mobile__img img {
+        width: 100%;
+    }
+
     .bar__title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .bar__description {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
